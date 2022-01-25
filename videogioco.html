@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Il Piccolo Principe | Videogioco</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  </head>
+
+  <body>
+
+    <div class="riquadro" id="contenuto">
+
+      <iframe src="gioco.html"
+        marginwidth="0"
+        marginheight="0"
+        hspace="0"
+        vspace="0"
+        frameborder="0"
+        scrolling="no"
+        width="1024px"
+        height="768px">
+    </iframe>
+
+    <div id="schermataCaricamento"><img src="caricamento.gif" id="barraCaricamento"></div>
+
+    </div>
+
+    <script type="text/javascript">
+
+      window.setTimeout("fineCaricamento();", 5000);
+
+      function fineCaricamento(){
+        document.getElementById("schermataCaricamento").style.display= "none";
+      }
+
+    </script>
+
+  </body>
+
+</html>

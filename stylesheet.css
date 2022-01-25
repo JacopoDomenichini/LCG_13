@@ -1,0 +1,147 @@
+/*WEBAPP GENERALE*/
+body {
+  background-image: url("pattern2.png");
+  background-repeat: no-repeat;
+  background-size: cover;               /*copre l'intera superficie della pagina senza stretch*/
+  background-attachment: fixed;         /*fixa la posizione*/
+}
+
+.riquadro {
+  width: 1024px;
+  height: 768px;
+  position: absolute;
+  top: 50%;                             /*sposto il riquadro a metà della pagina*/
+  left: 50%;
+  margin-top: -384px;                   /*"sposto" il riquadro indietro di metà della sua dimensione*/
+  margin-left: -512px;
+}
+
+/*COPERTINA*/
+#ilpiccoloprincipe {
+  position: absolute;
+  float: left;
+  top: 59.9297px;
+  left: 316.3789px;
+}
+
+#salviamolarosa {
+  position: absolute;
+  float: left;
+  top: 153.0752px;
+  left: 514.9723px;
+}
+
+#play {
+  position: absolute;
+  float: left;
+  top: 288.1357px;
+  left: 743.6284px;
+}
+
+#storia {
+  position: absolute;
+  float: left;
+  top: 292.2266px;
+  left: 513.7326px;
+}
+
+#crediti {
+  position: absolute;
+  float: left;
+  top: 345.3564px;
+  left: 510.7296px;
+}
+
+#info {
+  position: absolute;
+  float: left;
+  top: 704.5713px;
+  left: 548.666px;
+}
+
+/*STORIA E CREDITI*/
+#playStoria,#playCrediti  {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  float: left;
+  top: 320.5977px;
+}
+
+#creditiStoria, #storiaCrediti {
+  position: absolute;
+  float: left;
+  width: 100%;
+  text-align: center;
+  top: 365.7852px;
+}
+
+#homeStoria, #homeCrediti {
+  position: absolute;
+  float: left;
+  width: 100%;
+  text-align: center;
+  top: 410.9727px;
+}
+
+/*SLIDESHOW*/
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -14.5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  user-select: none;
+}
+
+.prev{
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.dot {
+  margin: 2.5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/*CLICK RESPONSIVE*/
+.clickable{
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.active, .clickable:hover {opacity: 0.4;}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*LOADING GIOCO*/
+#schermataCaricamento{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: +1;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+#barraCaricamento{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  heigth: 100%;
+}

@@ -1,0 +1,96 @@
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Il Piccolo Principe | Crediti</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  </head>
+
+  <body>
+
+    <div class="riquadro" id="contenuto">
+
+      <!--Contenitori slides-->
+
+      <div class="mySlides">
+        <img src="crediti01.jpg" style="width:100%; height:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="crediti02.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="creditiblur.jpg" style="width:100%">
+        <div id="playCrediti"><a href="videogioco.html" class="clickable"><img src="menuplay.png"></a></div>
+        <div id="storiaCrediti"><a href="storia.html" class="clickable"><img src="menustoria.png"></a></div>
+        <div id="homeCrediti"><a href="index.html" class="clickable"><img src="menuhome.png"></a></div>
+      </div>
+
+      <!--Pulsanti avanti/indietro-->
+      <a class="prev clickable" id="pulsanteIndietro" onclick="plusSlides(-1)"><img src="frecciaprev.png" style="width:100%"></a>
+      <a class="next clickable" id="pulsanteAvanti" onclick="plusSlides(1)"><img src="freccianext.png" style="width:100%"></a>
+
+      <!--Puntini immagine-->
+      <div style="width: 100%; text-align: center; position: absolute; bottom: 0">
+
+        <span class="dot clickable" onclick="currentSlide(1)"><img src="dot01.png" style="width: 100%"></span>
+        <span class="dot clickable" onclick="currentSlide(2)"><img src="dot02.png" style="width: 100%"></span>
+        <span class="dot clickable" onclick="currentSlide(3)"><img src="dot03.png" style="width: 100%"></span>
+
+      </div>
+
+    </div>
+
+    <script>
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      //Controllo con frecce
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      //Controllo con pulsanti
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+
+        var avanti = document.getElementById("pulsanteAvanti");
+        var indietro = document.getElementById("pulsanteIndietro");
+
+        if(slideIndex == 1) {indietro.style.display = "none";}
+        else {indietro.style.display = "block";}
+
+        if(slideIndex == slides.length) {avanti.style.display = "none";}
+        else {avanti.style.display = "block";}
+
+
+      }
+
+    </script>
+
+  </body>
+
+</html>
